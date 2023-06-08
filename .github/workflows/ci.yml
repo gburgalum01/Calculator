@@ -1,0 +1,42 @@
+name: java-build
+run-name: ${{github.actor}} is Running a Java Build
+on:
+  push:
+  workflow_dispatch:
+jobs:
+  java-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checking Out the Repository
+        uses: actions/checkout@v3
+      - name: Read Version from Properties File
+        id: read_property
+        uses: madhead/read-java-properties@latest
+        with:
+          file: src/main/resources/application.properties
+          property: release.version
+      - name: Echo the Version Number
+        run: echo ${{ steps.read_property.outputs.value }}
+      - uses: actions/setup-java@v3
+        with:
+          java-version: '8'
+          distribution: 'corretto'
+      - name: Validate Gradle Wrapper
+        uses: gradle/wrapper-validation-action@v1
+      - name: Change Gradle Wrapper Permissions
+        run: chmod +x ./gradlew
+      - name: Run the Gradle Build Task
+        uses: gradle/gradle-build-action@v2
+        with:
+          arguments: build -Pversion=${{ steps.read_property.outputs.value }}
+      - name: Upload the JAR Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: Calculator.jar Artifact (Zipped)
+          path: build/libs
+      - name: Upload the JUnit Test Results
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: JUnit Tests (Zipped)
+          path: build/reports/tests/test/

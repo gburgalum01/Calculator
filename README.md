@@ -13,4 +13,6 @@ On the Actions tab in the GitHub repository, click the workflow job named *java-
 
 As this particular job is set up to handle the *workflow_dispatch* event, it can be run manually.  Therefore, in the table containing the workflow runs, click the *Run workflow* button.  In the dialog shown, select *master* as the branch and click the *Run workflow* button.
 
-After a minute, the job will complete.  Click on the workflow run.  The artifacts section will contain the JAR artifact as well as the results of running the JUnit tests as part of the build._
+After a minute, the job will complete.  Click on the workflow run.  The artifacts section will contain the JAR artifact as well as the results of running the JUnit tests as part of the build.
+
+![image](https://github.com/gburgalum01/Calculator/assets/10605837/f2065bae-f2c5-4e0b-8612-e8a86fac747d)

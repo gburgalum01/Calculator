@@ -13,19 +13,19 @@ On the Actions tab in the GitHub repository, click the workflow job named *java-
 
 As this particular job is set up to handle the *workflow_dispatch* event, it can be run manually.  Therefore, in the table containing the workflow runs, click the *Run workflow* button.  In the dialog shown, select *main* as the branch and click the *Run workflow* button.
 
-![image](https://github.com/gburgalum01/Calculator/assets/10605837/c7963faf-7a85-4d65-be68-e160427f4f54)
+![Screenshot](.assets/github_actions_1.png)
 
 The running job instance will display in the list.
 
-![image](https://github.com/gburgalum01/Calculator/assets/10605837/821b7f17-7469-4880-a8ed-1c26cd9e35c8)
+![Screenshot](.assets/github_actions_2.png)
 
 After a minute, the job will complete.  Click on the workflow run.  The artifacts section will contain the JAR artifact as well as the results of running the JUnit tests as part of the build.
 
-![image](https://github.com/gburgalum01/Calculator/assets/10605837/898c065b-3340-404d-899e-2c3bb5d94df4)
+![Screenshot](.assets/github_actions_3.png)
 
 ## Running the Application
 
 The JAR file can be downloaded by clicking it in the Artifacts section of the workflow run summary page.  Assuming that you have a Java Runtime Environment of 11 or greater installed on your machine, run the command *java -jar Calculator-1.0.0.jar* in a terminal to run a few sample calculations.
 
-![Screenshot](.github/assets/running_the_app.png)
+![Screenshot](.assets/running_the_app.png)
 

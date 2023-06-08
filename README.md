@@ -21,5 +21,6 @@ The running job instance will display in the list.
 
 After a minute, the job will complete.  Click on the workflow run.  The artifacts section will contain the JAR artifact as well as the results of running the JUnit tests as part of the build.
 
-![image](https://github.com/gburgalum01/Calculator/assets/10605837/9ea23d94-1a91-452a-a7dd-9896ac16f470)
+![image](https://github.com/gburgalum01/Calculator/assets/10605837/898c065b-3340-404d-899e-2c3bb5d94df4)
+
 

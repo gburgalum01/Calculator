@@ -27,5 +27,5 @@ After a minute, the job will complete.  Click on the workflow run.  The artifact
 
 The JAR file can be downloaded by clicking it in the Artifacts section of the workflow run summary page.  Assuming that you have a Java Runtime Environment of 11 or greater installed on your machine, run the command *java -jar Calculator-1.0.0.jar* in a terminal to run a few sample calculations.
 
-![image](https://github.com/gburgalum01/Calculator/assets/10605837/f0904a19-eb9e-4ced-b320-8de356928d26)
+![image](https://github.com/gburgalum01/Calculator/assets/10605837/67832889-e862-49a9-80b9-586c2f5e8a19)
 
